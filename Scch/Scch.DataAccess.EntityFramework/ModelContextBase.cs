@@ -2,7 +2,7 @@
 using System.IO;
 using Scch.Common.Configuration;
 
-namespace Scch.DomainModel.EntityFramework
+namespace Scch.DataAccess.EntityFramework
 {
     public abstract class ModelContextBase : IModelContext
     {

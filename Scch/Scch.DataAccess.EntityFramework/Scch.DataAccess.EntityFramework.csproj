@@ -73,9 +73,11 @@
     <Compile Include="IEntityFrameworkRepository.cs" />
     <Compile Include="IEntityFrameworkRepositoryFactory.cs" />
     <Compile Include="IEntityFrameworkUnitOfWork.cs" />
+    <Compile Include="IModelContext.cs" />
     <Compile Include="IndexInfo.cs" />
     <Compile Include="IObjectQuery.cs" />
     <Compile Include="MetadataInfo.cs" />
+    <Compile Include="ModelContextBase.cs" />
     <Compile Include="ObjectQueryWrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EntityFrameworkRepositoryFactory.cs" />

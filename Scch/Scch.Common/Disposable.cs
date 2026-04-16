@@ -8,7 +8,7 @@ namespace Scch.Common
     /// <summary>
     /// Base implementation for disposable classes.
     /// </summary>
-    public class Disposable : IDisposable
+    public abstract class Disposable : IDisposable
     {
         #region Events
         /// <summary>

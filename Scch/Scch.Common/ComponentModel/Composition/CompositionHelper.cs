@@ -11,7 +11,7 @@ namespace Scch.Common.ComponentModel.Composition
 {
     public static class CompositionHelper
     {
-        public static CompositionContainer CreateCompositionContainer(SearchOption searchOption=SearchOption.TopDirectoryOnly)
+        public static CompositionContainer CreateCompositionContainer(SearchOption searchOption = SearchOption.TopDirectoryOnly)
         {
             return CreateCompositionContainer(new string[0], new string[0], searchOption);
         }
@@ -28,7 +28,8 @@ namespace Scch.Common.ComponentModel.Composition
 
             var ignore = ignoreAssemblies.Select(assembly => assembly.ToLower()).ToList();
 
-            var executingAssemblyLocation = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
+            var executingAssembly = Assembly.GetExecutingAssembly();
+            var executingAssemblyLocation = new DirectoryInfo(Path.GetDirectoryName(executingAssembly.Location));
 
             var files = new List<FileInfo>();
             foreach (var fileType in FileHelper.AssemblyFileTypes)
@@ -59,16 +60,17 @@ namespace Scch.Common.ComponentModel.Composition
                 }
             }
 
-            if (!assemblies.Contains(Assembly.GetExecutingAssembly().Location.ToLower()))
+            if (!assemblies.Contains(executingAssembly.Location.ToLower()))
             {
-                catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
-                assemblies.Add(Assembly.GetExecutingAssembly().Location.ToLower());
+                catalog.Catalogs.Add(new AssemblyCatalog(executingAssembly));
+                assemblies.Add(executingAssembly.Location.ToLower());
             }
 
-            if (Assembly.GetEntryAssembly() != null && !assemblies.Contains(Assembly.GetEntryAssembly().Location.ToLower()))
+            var entryAssembly = Assembly.GetEntryAssembly();
+            if (entryAssembly != null && !assemblies.Contains(entryAssembly.Location.ToLower()))
             {
-                catalog.Catalogs.Add(new AssemblyCatalog(Assembly.GetEntryAssembly()));
-                assemblies.Add(Assembly.GetEntryAssembly().Location.ToLower());
+                catalog.Catalogs.Add(new AssemblyCatalog(entryAssembly));
+                assemblies.Add(entryAssembly.Location.ToLower());
             }
 
             // Load module assemblies as well (e.g. Reporting extension). See App.config file.

@@ -1,4 +1,4 @@
-﻿namespace Scch.DomainModel.EntityFramework
+﻿namespace Scch.DataAccess.EntityFramework
 {
     public interface IModelContext
     {

@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCBB5280-9F95-478A-8D8D-736DAD33E627}</ProjectGuid>
+    <ProjectGuid>{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Scch.DataAccess.Hibernate</RootNamespace>
-    <AssemblyName>Scch.DataAccess.Hibernate</AssemblyName>
+    <RootNamespace>Scch.BusinessLogic.Hibernate</RootNamespace>
+    <AssemblyName>Scch.BusinessLogic.Hibernate</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,11 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,26 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\GeneralAssemblyInfo.cs">
-      <Link>GeneralAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="HibernateRepository.cs" />
-    <Compile Include="HibernateRepositoryFactory.cs" />
-    <Compile Include="HibernateUnitOfWork.cs" />
-    <Compile Include="IHibernateRepository.cs" />
-    <Compile Include="IHibernateRepositoryFactory.cs" />
-    <Compile Include="IHibernateUnitOfWork.cs" />
-    <Compile Include="IModelContext.cs" />
-    <Compile Include="ModelContextBase.cs" />
+    <Compile Include="HibernateExceptionHelper.cs" />
+    <Compile Include="HibernateCrudService.cs" />
+    <Compile Include="IHibernateCrudService.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Scch.Common\Scch.Common.csproj">
       <Project>{C3E275B2-0608-4D91-9EA6-A367DDF3A10B}</Project>
       <Name>Scch.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess.Hibernate\Scch.DataAccess.Hibernate.csproj">
+      <Project>{CCBB5280-9F95-478A-8D8D-736DAD33E627}</Project>
+      <Name>Scch.DataAccess.Hibernate</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Scch.DataAccess\Scch.DataAccess.csproj">
-      <Project>{73f24e41-f9b3-490c-916f-b8ac1a724049}</Project>
+      <Project>{73F24E41-F9B3-490C-916F-B8AC1A724049}</Project>
       <Name>Scch.DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Scch.DomainModel.Hibernate\Scch.DomainModel.Hibernate.csproj">
@@ -81,18 +82,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="EnterpriseLibrary.Common">
-      <Version>6.0.1304</Version>
-    </PackageReference>
-    <PackageReference Include="EnterpriseLibrary.Logging">
-      <Version>6.0.1304</Version>
-    </PackageReference>
-    <PackageReference Include="FluentNHibernate">
-      <Version>3.4.1</Version>
-    </PackageReference>
-    <PackageReference Include="NHibernate">
-      <Version>5.6.0</Version>
-    </PackageReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

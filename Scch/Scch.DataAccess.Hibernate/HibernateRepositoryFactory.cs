@@ -16,7 +16,7 @@ namespace Scch.DataAccess.Hibernate
         private readonly string _connectionString;
         private readonly ISessionFactory _sessionFactory;
 
-        protected HibernateRepositoryFactory(string connectionString, Assembly[] entityAssemblies)
+        protected HibernateRepositoryFactory(string connectionString, string[] entityAssemblies)
         {
             if (_isInitialized)
                 throw new InvalidOperationException("Already initialized");
@@ -32,7 +32,7 @@ namespace Scch.DataAccess.Hibernate
 
             foreach (var assembly in entityAssemblies) 
             {
-                configuration= configuration.Mappings(m => m.FluentMappings.AddFromAssembly(assembly));
+                configuration= configuration.Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.Load(assembly)));
             }
 
             _sessionFactory = configuration.BuildSessionFactory();

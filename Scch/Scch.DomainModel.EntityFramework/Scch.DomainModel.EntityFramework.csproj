@@ -60,11 +60,9 @@
     <Compile Include="EntityFrameworkEntity.cs" />
     <Compile Include="IEntityFrameworkModelResolver.cs" />
     <Compile Include="IEntityFrameworkEntity.cs" />
-    <Compile Include="IModelContext.cs" />
     <Compile Include="IObjectWithChangeTracker.cs" />
     <Compile Include="Mapping\AuditLogMapping.cs" />
     <Compile Include="Mapping\EntityFrameworkEntityMappingBase.cs" />
-    <Compile Include="ModelContextBase.cs" />
     <Compile Include="ObjectChangeTracker.cs" />
     <Compile Include="ObjectList.cs" />
     <Compile Include="ObjectsAddedToCollectionProperties.cs" />

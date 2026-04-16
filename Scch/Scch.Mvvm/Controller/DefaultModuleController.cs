@@ -44,12 +44,7 @@ namespace Scch.Mvvm.Controller
         /// </summary>
         public virtual void Shutdown()
         {
-
-        }
-
-        private void ShellViewModelClosing(object sender, CancelEventArgs e)
-        {
-
+            Close();
         }
 
         private void Close()

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.4.11605.240 stable
+VisualStudioVersion = 18.4.11605.240
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scch.DataAccess", "Scch.DataAccess\Scch.DataAccess.csproj", "{73F24E41-F9B3-490C-916F-B8AC1A724049}"
 EndProject
@@ -94,7 +94,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scch.DataAccess.Hibernate",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scch.DomainModel.Hibernate", "Scch.DomainModel.Hibernate\Scch.DomainModel.Hibernate.csproj", "{ADF5F39D-B997-464B-AB1F-3095BF7E514F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{68E056E2-112B-4102-AC0A-6D485FBF9EC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scch.BusinessLogic.Hibernate", "Scch.BusinessLogic.Hibernate\Scch.BusinessLogic.Hibernate.csproj", "{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -606,26 +606,26 @@ Global
 		{ADF5F39D-B997-464B-AB1F-3095BF7E514F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{ADF5F39D-B997-464B-AB1F-3095BF7E514F}.Release|x86.ActiveCfg = Release|Any CPU
 		{ADF5F39D-B997-464B-AB1F-3095BF7E514F}.Release|x86.Build.0 = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Debug|x86.Build.0 = Debug|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|x86.ActiveCfg = Release|Any CPU
-		{68E056E2-112B-4102-AC0A-6D485FBF9EC9}.Release|x86.Build.0 = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Debug|x86.Build.0 = Debug|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{34F61DC6-0A11-470C-A1D4-EA2FF805A9CA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7D51F128-B151-4853-95F8-DF6EB9A41724}
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35
 		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35
+		SolutionGuid = {7D51F128-B151-4853-95F8-DF6EB9A41724}
 	EndGlobalSection
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = Scch.vsmdi
