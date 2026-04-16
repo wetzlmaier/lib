@@ -1,0 +1,64 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:view="clr-namespace:Scch.Mvvm.View;assembly=Scch.Mvvm"
+  xmlns:viewModel="clr-namespace:Scch.Mvvm.ViewModel;assembly=Scch.Mvvm"
+  xmlns:design="clr-namespace:Scch.Mvvm.Design;assembly=Scch.Mvvm"
+  xmlns:media="clr-namespace:Scch.Common.Windows.Media;assembly=Scch.Common"
+  xmlns:windows="clr-namespace:Scch.Common.Windows;assembly=Scch.Common">
+
+    <DataTemplate DataType="{x:Type viewModel:ModalDialogViewModel}">
+        <view:ModalDialogView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type design:ModalDialogViewModelDesignData}">
+        <view:ModalDialogView/>
+    </DataTemplate>
+
+    <DataTemplate x:Key="BrushInfoTemplate" DataType="{x:Type media:BrushInfo}">
+        <StackPanel Orientation="Horizontal">
+            <Border BorderThickness="1" BorderBrush="Black" Width="20" Height="12" SnapsToDevicePixels="True" Margin="0,0,4,0">
+                <Border Background="{Binding Brush}"/>
+            </Border>
+            <TextBlock Text="{Binding Name}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <ObjectDataProvider x:Key="GetBrushes" MethodName="GetBrushes" ObjectType="{x:Type media:BrushHelper}"/>
+    
+    <DataTemplate x:Key="ThicknessTemplate" DataType="{x:Type Thickness}">
+        <Image Height="18" Width="70">
+            <Image.Source>
+                <DrawingImage>
+                    <DrawingImage.Drawing>
+                        <GeometryDrawing Brush="Black">
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="0,9" EndPoint="38,9" />
+                            </GeometryDrawing.Geometry>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="Black" Thickness="{Binding Left}" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                    </DrawingImage.Drawing>
+                </DrawingImage>
+            </Image.Source>
+        </Image>
+    </DataTemplate>
+
+    <ObjectDataProvider x:Key="GetThicknesses" MethodName="GetThicknesses" ObjectType="{x:Type windows:ThicknessHelper}"/>
+
+    <DataTemplate x:Key="HeaderTemplateArrowUp">
+        <DockPanel>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding}"/>
+            <Path x:Name="arrow" StrokeThickness = "1" Fill = "Gray" Data = "M 5,10 L 15,10 L 10,5 L 5,10"/>
+        </DockPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="HeaderTemplateArrowDown">
+        <DockPanel>
+            <TextBlock HorizontalAlignment="Center" Text="{Binding}"/>
+            <Path x:Name="arrow" StrokeThickness = "1" Fill = "Gray" Data = "M 5,5 L 10,10 L 15,5 L 5,5"/>
+        </DockPanel>
+    </DataTemplate>
+
+</ResourceDictionary>

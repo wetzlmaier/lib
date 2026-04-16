@@ -1,0 +1,12 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+
+  xmlns:viewModel="clr-namespace:Scch.Controls.Mvvm.ViewModel"
+  xmlns:view="clr-namespace:Scch.Controls.Mvvm.View">
+
+    <DataTemplate DataType="{x:Type viewModel:TablePropertiesViewModel}">
+        <view:TablePropertiesView/>
+    </DataTemplate>
+
+</ResourceDictionary>

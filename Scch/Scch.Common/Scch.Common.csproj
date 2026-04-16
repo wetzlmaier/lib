@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3E275B2-0608-4D91-9EA6-A367DDF3A10B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scch.Common</RootNamespace>
+    <AssemblyName>Scch.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>bin\Debug\Scch.Common.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Collections\Generic\ReadOnlyDictionary.cs" />
+    <Compile Include="Collections\Generic\SerializableDictionary.cs" />
+    <Compile Include="Collections\Generic\SerializableList.cs" />
+    <Compile Include="Collections\ListExtensions.cs" />
+    <Compile Include="Collections\ObjectModel\ThreadSafeObservableCollection.cs" />
+    <Compile Include="Collections\ObjectModel\UIThreadSafeObservableCollection.cs" />
+    <Compile Include="ComponentModel\Composition\CompositionHelper.cs" />
+    <Compile Include="ComponentModel\Composition\ExportNotFoundException.cs" />
+    <Compile Include="ComponentModel\Composition\INameMetadata.cs" />
+    <Compile Include="ComponentModel\Composition\MetadataHelper.cs" />
+    <Compile Include="ComponentModel\Composition\NamedExportAttribute.cs" />
+    <Compile Include="ComponentModel\Composition\NameMetadataBase.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\DefaultAttribute.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\IndexDirection.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\IndexAttribute.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\IValidationService.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\IValidator.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\ValidationException.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\ValidationService.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\ValidationSummary.cs" />
+    <Compile Include="ComponentModel\DataAnnotations\ValidatorBase.cs" />
+    <Compile Include="ComponentModel\IDisplayNamesProvider.cs" />
+    <Compile Include="ComponentModel\IExtendedDataErrorInfo.cs" />
+    <Compile Include="ComponentModel\DataErrorInfo.cs" />
+    <Compile Include="ComponentModel\LocalizedAttributeHelper.cs" />
+    <Compile Include="ComponentModel\LocalizedCategoryAttribute.cs" />
+    <Compile Include="ComponentModel\LocalizedDescriptionAttribute.cs" />
+    <Compile Include="ComponentModel\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="ComponentModel\NotifyPropertyChanged.cs" />
+    <Compile Include="ComponentModel\OrderedComparer.cs" />
+    <Compile Include="ComponentModel\ProjectionComparer.cs" />
+    <Compile Include="Configuration\ConfigurationHelper.cs" />
+    <Compile Include="Configuration\ConfigurationValueException.cs" />
+    <Compile Include="ConsoleApplication.cs" />
+    <Compile Include="Conversion\Converter.cs" />
+    <Compile Include="Data\DataTableHelper.cs" />
+    <Compile Include="Data\ExtendedDataColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Diagnostics\DebugConverter.cs" />
+    <Compile Include="Diagnostics\DiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\IDiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\ILogicalDiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\IPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\IPhysicalDiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\IProcessInfo.cs" />
+    <Compile Include="Diagnostics\IProcessPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\ISystemPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\LogicalDiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\PerformanceCounterBase.cs" />
+    <Compile Include="Diagnostics\PhysicalDiskPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\ProcessHelper.cs" />
+    <Compile Include="Diagnostics\ProcessInfo.cs" />
+    <Compile Include="Diagnostics\ProcessPerformanceCounter.cs" />
+    <Compile Include="Diagnostics\SystemPerformanceCounter.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="Drawing\ImageHelper.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="EnumValueToStringConverter.cs" />
+    <Compile Include="EqualityHelper.cs" />
+    <Compile Include="EventHandlerHelper.cs" />
+    <Compile Include="ExitCodes.cs" />
+    <Compile Include="FunctorComparer.cs" />
+    <Compile Include="Globalization\Translator.cs" />
+    <Compile Include="Drawing\IImageProvider.cs" />
+    <Compile Include="IO\DirectoryHelper.cs" />
+    <Compile Include="IO\EncodingStringWriter.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="Linq\Expressions\ExpressionHelper.cs" />
+    <Compile Include="Net\Sockets\TcpHelper.cs" />
+    <Compile Include="ObjectCloner.cs" />
+    <Compile Include="RandomHelper.cs" />
+    <Compile Include="Reflecton\AssemblyHelper.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reflecton\AssemblyInfo.cs" />
+    <Compile Include="Reflecton\DebugHelper.cs" />
+    <Compile Include="Reflecton\IAssemblyInfo.cs" />
+    <Compile Include="Reflecton\MethodHelper.cs" />
+    <Compile Include="Reflecton\NumberType.cs" />
+    <Compile Include="Reflecton\PropertyHelper.cs" />
+    <Compile Include="Reflecton\PropertyMapper.cs" />
+    <Compile Include="Reflecton\PropertyNotFoundException.cs" />
+    <Compile Include="Reflecton\TypeHelper.cs" />
+    <Compile Include="Runtime\Serialization\SerializationHelper.cs" />
+    <Compile Include="Security\Cryptography\HashHelper.cs" />
+    <Compile Include="StringHelper.cs" />
+    <Compile Include="Threading\AsyncPump.cs" />
+    <Compile Include="Threading\BatchOperation.cs" />
+    <Compile Include="Threading\BlockingConditionDelegate.cs" />
+    <Compile Include="Threading\CancelableDelegate.cs" />
+    <Compile Include="Threading\MonitoringDelegate.cs" />
+    <Compile Include="Threading\SingleThreadedSynchronizationContext.cs" />
+    <Compile Include="Threading\Tasks\ParallelHelper.cs" />
+    <Compile Include="Threading\Timer.cs" />
+    <Compile Include="Threading\ProcessWatchDog.cs" />
+    <Compile Include="Threading\CancellationDelegate.cs" />
+    <Compile Include="Web\HtmlHelper.cs" />
+    <Compile Include="Windows\BoolToBrushConverter.cs" />
+    <Compile Include="Windows\BoolToFontWeightConverter.cs" />
+    <Compile Include="Windows\Kernel32.cs" />
+    <Compile Include="Windows\KeyboardHelper.cs" />
+    <Compile Include="Windows\Shlwapi.cs" />
+    <Compile Include="Windows\Forms\TreeNodeComparer.cs" />
+    <Compile Include="Windows\WindowsVirtualKey.cs" />
+    <Compile Include="Windows\RichTextBoxBaseScrollToHomeTriggerAction.cs" />
+    <Compile Include="Windows\DTConst.cs" />
+    <Compile Include="Windows\FolderBrowserDialog.cs" />
+    <Compile Include="Windows\Input\EquatableKeyGesture.cs" />
+    <Compile Include="Windows\Input\KeyGesturePressedEventHandler.cs" />
+    <Compile Include="Windows\Input\InputBindings.cs" />
+    <Compile Include="Windows\Input\KeyboardHook.cs" />
+    <Compile Include="Windows\Input\KeyGesturePressedEventArgs.cs" />
+    <Compile Include="Windows\Input\KeyGestureToStringConverter.cs" />
+    <Compile Include="Windows\Interactivity\AllowableCharactersTextBoxBehavior .cs" />
+    <Compile Include="Windows\Input\CommandBehaviorBase.cs" />
+    <Compile Include="Windows\LevelToIndentConverter.cs" />
+    <Compile Include="Windows\Markup\DisplayNameExtension.cs" />
+    <Compile Include="Windows\Markup\FirstFocusedElementExtension.cs" />
+    <Compile Include="Windows\Markup\GenericType.cs" />
+    <Compile Include="Windows\Media\BrushHelper.cs" />
+    <Compile Include="Windows\Media\BrushInfo.cs" />
+    <Compile Include="Windows\Media\Imaging\BitmapSourceBase.cs" />
+    <Compile Include="Windows\Media\Imaging\BitmapSourceHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflecton\RuntimeTypeBuilder.cs" />
+    <Compile Include="Windows\Media\Imaging\BitmapToImageSourceConverter.cs" />
+    <Compile Include="Windows\Media\Imaging\IImageSourceProvider.cs" />
+    <Compile Include="Windows\Media\TextFormatter.cs" />
+    <Compile Include="Windows\RichTextBoxScrollToEndTriggerAction.cs" />
+    <Compile Include="Windows\TextBoxBaseScrollToEndTriggerAction.cs" />
+    <Compile Include="Windows\Shell32.cs" />
+    <Compile Include="Windows\Structures.cs" />
+    <Compile Include="Windows\StyleInfo.cs" />
+    <Compile Include="Windows\TextBoxBaseScrollToHomeTriggerAction.cs" />
+    <Compile Include="Windows\TextBoxScrollToEndTriggerAction.cs" />
+    <Compile Include="Windows\TextBoxScrollToHomeTriggerAction.cs" />
+    <Compile Include="Windows\ThicknessHelper.cs" />
+    <Compile Include="Windows\Threading\DispatcherHelper.cs" />
+    <Compile Include="Windows\User32.cs" />
+    <Compile Include="Windows\WaitCursor.cs" />
+    <Compile Include="Windows\WindowHelper.cs" />
+    <Compile Include="Windows\WindowsMessages.cs" />
+    <Compile Include="Xml\Serialization\ColorSerializer.cs" />
+    <Compile Include="Xml\Serialization\DictionarySerializer.cs" />
+    <Compile Include="Xml\Serialization\ImageSerializer.cs" />
+    <Compile Include="Xml\Serialization\TypeSerializer.cs" />
+    <Compile Include="Xml\Serializer.cs" />
+    <Compile Include="Xml\Xsl\XslTransformHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+      <Version>1.1.142</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

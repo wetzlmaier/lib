@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1303D967-4E47-49C3-A09B-9FB55140AEB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scch.DomainModel.EntityFramework.Tests</RootNamespace>
+    <AssemblyName>Scch.DomainModel.EntityFramework.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anweisungstyp.cs" />
+    <Compile Include="Auspraegung.cs" />
+    <Compile Include="EntityWithBezeichnung.cs" />
+    <Compile Include="FieldLength.cs" />
+    <Compile Include="FieldRange.cs" />
+    <Compile Include="ManyToManyFixupTest.cs" />
+    <Compile Include="MappingTest.cs" />
+    <Compile Include="Mapping\AnweisungstypMapping.cs" />
+    <Compile Include="Mapping\AuspraegungMapping.cs" />
+    <Compile Include="Mapping\EntityWithBezeichnungMapping.cs" />
+    <Compile Include="Mapping\MerkmalsgruppeMapping.cs" />
+    <Compile Include="Mapping\ProduktgruppeMapping.cs" />
+    <Compile Include="Mapping\ProduktMapping.cs" />
+    <Compile Include="Mapping\ProduktmerkmalMapping.cs" />
+    <Compile Include="Mapping\ProduktversionMapping.cs" />
+    <Compile Include="Merkmalsgruppe.cs" />
+    <Compile Include="NotifyPropertyChangedTest.cs" />
+    <Compile Include="OneToManyFixupTest.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Produkt.cs" />
+    <Compile Include="Produktgruppe.cs" />
+    <Compile Include="Produktmerkmal.cs" />
+    <Compile Include="Produktversion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TrackableCollectionTest.cs" />
+    <Compile Include="TranslationTest.cs" />
+    <Compile Include="ValidationTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scch.Common\Scch.Common.csproj">
+      <Project>{C3E275B2-0608-4D91-9EA6-A367DDF3A10B}</Project>
+      <Name>Scch.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess.EntityFramework\Scch.DataAccess.EntityFramework.csproj">
+      <Project>{D447E85E-76EB-4AED-8EE3-D60D473A77DF}</Project>
+      <Name>Scch.DataAccess.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel.EntityFramework\Scch.DomainModel.EntityFramework.csproj">
+      <Project>{3F402AD5-3CFD-45A6-912D-3DF0E7545E9A}</Project>
+      <Name>Scch.DomainModel.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel\Scch.DomainModel.csproj">
+      <Project>{1854F4CF-6C1B-45AF-A92A-9882890DF194}</Project>
+      <Name>Scch.DomainModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter">
+      <Version>4.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="MSTest.TestFramework">
+      <Version>4.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

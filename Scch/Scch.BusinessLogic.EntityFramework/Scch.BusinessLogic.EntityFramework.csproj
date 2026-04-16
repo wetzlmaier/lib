@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DF3ABA1-C198-4A66-BA2D-D794882B2C04}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scch.BusinessLogic.EntityFramework</RootNamespace>
+    <AssemblyName>Scch.BusinessLogic.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BusinessHelper.cs" />
+    <Compile Include="EntityFrameworkCrudService.cs" />
+    <Compile Include="EntityFrameworkExceptionHelper.cs" />
+    <Compile Include="EntityView.cs" />
+    <Compile Include="IEntityFrameworkCrudService.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
+    <Compile Include="OptimisticLockingException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scch.Common\Scch.Common.csproj">
+      <Project>{C3E275B2-0608-4D91-9EA6-A367DDF3A10B}</Project>
+      <Name>Scch.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess.EntityFramework\Scch.DataAccess.EntityFramework.csproj">
+      <Project>{D447E85E-76EB-4AED-8EE3-D60D473A77DF}</Project>
+      <Name>Scch.DataAccess.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess\Scch.DataAccess.csproj">
+      <Project>{73F24E41-F9B3-490C-916F-B8AC1A724049}</Project>
+      <Name>Scch.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel.EntityFramework\Scch.DomainModel.EntityFramework.csproj">
+      <Project>{3F402AD5-3CFD-45A6-912D-3DF0E7545E9A}</Project>
+      <Name>Scch.DomainModel.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel\Scch.DomainModel.csproj">
+      <Project>{1854F4CF-6C1B-45AF-A92A-9882890DF194}</Project>
+      <Name>Scch.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.Logging\Scch.Logging.csproj">
+      <Project>{CF9BBB3F-5C95-467E-9D19-863FFF5ED58F}</Project>
+      <Name>Scch.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.5.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

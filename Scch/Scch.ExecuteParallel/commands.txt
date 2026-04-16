@@ -1,0 +1,70 @@
+﻿call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Auslastung\Auslastung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Auslastung\Auslastung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bauteilsicherheit Kran\BTSKran.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bauteilsicherheit_Kran\BTSKran
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bauteilsicherheit Kran\BTSKran_NegUeberlast.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bauteilsicherheit_Kran\BTSKran_NegUeberlast
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bauteilsicherheit Kran\BTSKran_Ueberlast.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bauteilsicherheit_Kran\BTSKran_Ueberlast
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bauteilsicherheit Seilwinde\BTSSe.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bauteilsicherheit_Seilwinde\BTSSe
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bauteilsicherheit Sttze\BTSStz.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bauteilsicherheit_Stuetze\BTSStz
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bereichsbegrenzungen\BerBeg.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bereichsbegrenzungen\BerBeg
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Bereichsbegrenzungen\BerBegSw.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Bereichsbegrenzungen\BerBegSw
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Betriebsarten\Betriebsarten.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Betriebsarten\Betriebsarten
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Fehlerspeicher\Fehlerspeicher.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__ -D__DEFINE_STATUS_VERWALTUNG__" Common\MT\Fehlerspeicher\Fehlerspeicher
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Funkmodul\FM_Kanalberechnung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Funkmodul\FM_Kanalberechnung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Funkmodul\FM_Sperrfunktionen.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Funkmodul\FM_Sperrfunktionen
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Funkmodul\Funkmodul.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Funkmodul\Funkmodul
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Geometrie\Geometrie.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Geometrie\Geometrie
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Geometrie\Geometrie_Kran.c" "-D__PAL_X__ -DTESSY" Common\MT\Geometrie\Geometrie_Kran
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Geometrie\Geometrie_Stz.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Geometrie\Geometrie_Stz
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Hochsitz\Hochsitz.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Hochsitz\Hochsitz
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPLS\A_HPLS.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPLS\A_HPLS
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPLS\EM_HPLS.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPLS\EM_HPLS
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPLS\HPLS.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPLS\HPLS
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\HPSC.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\HPSC
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Korrektur.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Korrektur
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Lastgrenze.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Lastgrenze
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Masselastpunkt.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Masselastpunkt
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Polygon.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Polygon
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Schnittpunkt.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Schnittpunkt
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\HPSC\Ueberlast.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\HPSC\Ueberlast
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Hubkraft\Hubkraft.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Hubkraft\Hubkraft
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Hubkraft\Hubkraft_Kran.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Hubkraft\Hubkraft_Kran
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Hubkraft\Hubkraft_Stz.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Hubkraft\Hubkraft_Stz
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\ISC\ISC.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\ISC\ISC
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\ISC\ISC_Lastgrenze.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\ISC\ISC_Lastgrenze
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\ISC\ISC_Ueberlast.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\ISC\ISC_Ueberlast
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\PalfMathLib\PalfMathLib.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\PalfMathLib\PalfMathLib
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Scheinwerfer\Scheinwerfer.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Scheinwerfer\Scheinwerfer
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Schwerpunkt\Schwerpunkt.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Schwerpunkt\Schwerpunkt
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Schwerpunkt\Schwerpunkt_Dyn.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Schwerpunkt\Schwerpunkt_Dyn
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Schwerpunkt\Schwerpunkt_Starr.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Schwerpunkt\Schwerpunkt_Starr
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\SHB\SHB.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\SHB\SHB
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\SHB\SHB_Lastgrenze.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\SHB\SHB_Lastgrenze
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\SHB\SHB_Ueberlast.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\SHB\SHB_Ueberlast
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Sperrbereich\Sperrbereich.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Sperrbereich\Sperrbereich
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Sperrfunktionsermittlung\Sperrfunktionsermittlung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Sperrfunktionsermittlung\Sperrfunktionsermittlung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Statistik\Statistik.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Statistik\Statistik
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Statistik\Statistik_Algorithmen.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Statistik\Statistik_Algorithmen
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Statistik\Statistik_Kran.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Statistik\Statistik_Kran
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Statistik\Statistik_Seilwinde.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Statistik\Statistik_Seilwinde
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Statusverwaltung\Statusverwaltung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Statusverwaltung\Statusverwaltung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Ueberlastueberbrueckung\UelUeb.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Ueberlastueberbrueckung\UelUeb
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Utilities\Utilities.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__ -D__DEBUG__" Common\MT\Utilities\Utilities
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Visualisierung\Visu_7Seg.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Visualisierung\Visu_7Seg
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Visualisierung\Visu_Leds.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Visualisierung\Visu_Leds
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Visualisierung\Visualisierung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Visualisierung\Visualisierung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Warneinrichtung\Blinkleuchte.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Warneinrichtung\Blinkleuchte
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Warneinrichtung\HupeH5.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Warneinrichtung\HupeH5
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Warneinrichtung\HupeH6.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Warneinrichtung\HupeH6
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Warneinrichtung\SigAusAusl.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Warneinrichtung\SigAusAusl
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\Common\Warneinrichtung\Warneinrichtung.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" Common\MT\Warneinrichtung\Warneinrichtung
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Ausgangsschnittstelle\Ausgangsschnittstelle.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Ausgangsschnittstelle\Ausgangsschnittstelle
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Ausgangsschnittstelle\Ausgangsschnittstelle_DigOut.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Ausgangsschnittstelle\Ausgangsschnittstelle_DigOut
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Ausgangsschnittstelle\Ausgangsschnittstelle_NA.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Ausgangsschnittstelle\Ausgangsschnittstelle_NA
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Ausgangsschnittstelle\Ausgangsschnittstelle_Swv.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Ausgangsschnittstelle\Ausgangsschnittstelle_Swv
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\BS-Statuskonverter\BSStatuskonverter.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\BS-Statuskonverter\BSStatuskonverter
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Eingangsschnittstelle\Eingangsschnittstelle.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Eingangsschnittstelle\Eingangsschnittstelle
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Eingangsschnittstelle\Eingangsschnittstelle_HMI.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Eingangsschnittstelle\Eingangsschnittstelle_HMI
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Eingangsschnittstelle\Eingangsschnittstelle_HW.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Eingangsschnittstelle\Eingangsschnittstelle_HW
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Eingangsschnittstelle\Eingangsschnittstelle_Kran.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Eingangsschnittstelle\Eingangsschnittstelle_Kran
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\Eingangsschnittstelle\Eingangsschnittstelle_Stz.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\Eingangsschnittstelle\Eingangsschnittstelle_Stz
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\TaskHandling\TaskHandling.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\TaskHandling\TaskHandling
+call DummyBatch.bat %ProgramFiles% "%SOURCEROOT%\Pal201X\Apps\AppKran\PalX\Komponenten\TaskHandling\TaskHandling_UDScb.c" "-D__PAL_X__ -DTESSY -D__SAFE_PLATTFORM__" PalX\MT\TaskHandling\TaskHandling_UDScb

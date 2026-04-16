@@ -1,0 +1,302 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ctl="clr-namespace:Scch.Controls"
+    xmlns:vm="clr-namespace:Scch.Mvvm.ViewModel;assembly=Scch.Mvvm"
+    xmlns:Input="clr-namespace:Scch.Common.Windows.Input;assembly=Scch.Common"
+    xmlns:Windows="clr-namespace:Scch.Common.Windows;assembly=Scch.Common"
+    xmlns:Markup="clr-namespace:Scch.Common.Windows.Markup;assembly=Scch.Common"
+    xmlns:Generic="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!--<ResourceDictionary Source="/PresentationFramework.Classic;component/themes/classic.xaml" />-->
+        <!--<ResourceDictionary Source="/PresentationFramework.Aero;component/themes/aero.normalcolor.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+        
+    <DataTemplate x:Key="ToolBarButtonTemplate" DataType="{x:Type vm:ICommandViewModel}">
+        <Button Command="{Binding Command}" ToolTip="{Binding ToolTip}" Style="{DynamicResource ResourceKey={x:Static ToolBar.ButtonStyleKey}}">
+            <StackPanel>
+                <ctl:AutoGreyableImage Source="{Binding Path=ImageSource}" Width="32" Height="32" />
+                <TextBlock Text="{Binding Path=DisplayName}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Button>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ToolBarToggleButtonTemplate" DataType="{x:Type vm:ICommandViewModel}">
+        <ToggleButton Command="{Binding Command}" ToolTip="{Binding ToolTip}" IsChecked="{Binding IsActive, Mode=TwoWay}" Style="{DynamicResource ResourceKey={x:Static ToolBar.ToggleButtonStyleKey}}">
+            <StackPanel>
+                <ctl:AutoGreyableImage Source="{Binding Path=ImageSource}" Width="32" Height="32" />
+                <TextBlock Text="{Binding Path=DisplayName}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </ToggleButton>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ToolBarSeparatorTemplate">
+        <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" />
+    </DataTemplate>
+
+    <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type vm:ICommandViewModel}">
+        <Button Command="{Binding Command}" ToolTip="{Binding ToolTip}" Style="{DynamicResource ResourceKey={x:Static MenuItem.SubmenuItemTemplateKey}}">
+            <StackPanel>
+                <ctl:AutoGreyableImage Source="{Binding Path=ImageSource}" />
+                <TextBlock Text="{Binding Path=DisplayName}" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Button>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MenuSeparatorTemplate">
+        <Separator Style="{StaticResource {x:Static MenuItem.SeparatorStyleKey}}" />
+    </DataTemplate>
+
+    <ctl:ToolBarItemTemplateSelector ButtonTemplate="{StaticResource ToolBarButtonTemplate}" ToggleButtonTemplate="{StaticResource ToolBarToggleButtonTemplate}" SeparatorTemplate="{StaticResource ToolBarSeparatorTemplate}" x:Key="ToolBarItemTemplateSelector" />
+
+    <ctl:AutoGreyableImage x:Key="NonSharedImage" x:Shared="False" Height="24" Width="24" Source="{Binding ImageSource}" />
+
+    <Input:KeyGestureToStringConverter x:Key="keyGestureToStringConverter"/>
+    <Windows:BoolToFontWeightConverter x:Key="boolToFontWeightConverter" />
+
+    <Style x:Key="CommandMenu" TargetType="{x:Type MenuItem}">
+        <Setter Property="MenuItem.Header" Value="{Binding DisplayName}"/>
+        <Setter Property="MenuItem.Icon" Value="{StaticResource NonSharedImage}"/> 
+        <Setter Property="MenuItem.Command" Value="{Binding Command}"/>
+        <Setter Property="InputGestureText" Value="{Binding Shortcut, Converter={StaticResource keyGestureToStringConverter}}"/>
+       
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding ImageSource}" Value="{x:Null}">
+                <Setter Property="MenuItem.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type MenuItem}">
+                            <Separator Style="{DynamicResource {x:Static MenuItem.SeparatorStyleKey}}"/>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <AlternationConverter x:Key="AlternateBackgroundConverter">
+        <SolidColorBrush Color="AliceBlue" />
+        <SolidColorBrush Color="White" />
+    </AlternationConverter>
+
+    <Style x:Key="ListBoxItemAlternateBackground" TargetType="{x:Type ListBoxItem}">
+        <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Self}, Path=(ItemsControl.AlternationIndex),
+                       Converter={StaticResource AlternateBackgroundConverter}}"/>
+    </Style>
+    
+    <Style TargetType="{x:Type ctl:SortableListView}">
+        <Setter Property="AlternationCount" Value="2" />
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ListBoxItemAlternateBackground}" />
+    </Style>
+
+    <Style TargetType="{x:Type ListBoxItem}">
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="ctl:ListBoxItemBehavior.BringIntoViewWhenSelected" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TreeViewItemDefaultStyle" TargetType="{x:Type TreeViewItem}">
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="ctl:TreeViewItemBehavior.BringIntoViewWhenSelected" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TreeViewItemViewModelStyle" TargetType="{x:Type TreeViewItem}" BasedOn="{StaticResource TreeViewItemDefaultStyle}">
+        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+        <Setter Property="FontWeight" Value="{Binding IsSelected, Converter={StaticResource boolToFontWeightConverter}}" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="ctl:TreeViewItemBehavior.BringIntoViewWhenSelected" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <!-- TreeListView -->
+
+    <PathGeometry x:Key="TreeArrow">
+        <PathGeometry.Figures>
+            <PathFigureCollection>
+                <PathFigure IsFilled="True" StartPoint="0 0" IsClosed="True">
+                    <PathFigure.Segments>
+                        <PathSegmentCollection>
+                            <LineSegment Point="0 6"/>
+                            <LineSegment Point="6 0"/>
+                        </PathSegmentCollection>
+                    </PathFigure.Segments>
+                </PathFigure>
+            </PathFigureCollection>
+        </PathGeometry.Figures>
+    </PathGeometry>
+
+    <Style x:Key="ExpandCollapseToggleStyle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Width="16" Height="16" Background="Transparent" Padding="5,5,5,5">
+                        <Path x:Name="ExpandPath" Fill="Transparent" Stroke="#FF989898" Data="{StaticResource TreeArrow}">
+                            <Path.RenderTransform>
+                                <RotateTransform Angle="135" CenterX="3" CenterY="3"/>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ExpandPath" Property="Stroke" Value="#FF1BBBFA"/>
+                            <Setter TargetName="ExpandPath" Property="Fill" Value="Transparent"/>
+                        </Trigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="ExpandPath" Property="RenderTransform">
+                                <Setter.Value>
+                                    <RotateTransform Angle="180" CenterX="3" CenterY="3"/>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="ExpandPath" Property="Fill" Value="#FF595959"/>
+                            <Setter TargetName="ExpandPath" Property="Stroke" Value="#FF262626"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Windows:LevelToIndentConverter x:Key="levelToIndentConverter" Intent="19" />
+
+    <HierarchicalDataTemplate ItemsSource="{Binding Items}" x:Key="TreeListViewItemViewModel" DataType="{x:Type vm:ITreeViewItemViewModel}">
+        <StackPanel Orientation="Horizontal">
+            <ctl:AutoGreyableImage Source="{Binding Path=ImageSource}" Width="16" Height="16" Margin="0,1,5,0" />
+            <TextBlock Text="{Binding DisplayName}" />
+        </StackPanel>
+    </HierarchicalDataTemplate>
+
+    <HierarchicalDataTemplate ItemsSource="{Binding Items}" x:Key="TreeViewItemViewModelColumn" DataType="{x:Type vm:ITreeViewItemViewModel}">
+        <DockPanel>
+            <ToggleButton x:Name="Expander" Style="{StaticResource ResourceKey=ExpandCollapseToggleStyle}" Margin="{Binding Level, Converter={StaticResource levelToIndentConverter}, RelativeSource={RelativeSource AncestorType={x:Type ctl:TreeListViewItem}}}" IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource AncestorType={x:Type ctl:TreeListViewItem}}}" ClickMode="Press"/>
+            <ctl:AutoGreyableImage Source="{Binding Path=ImageSource}" Width="16" Height="16" Margin="0,1,5,0" />
+            <TextBlock Text="{Binding DisplayName}"/>
+        </DockPanel>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=HasItems, RelativeSource={RelativeSource AncestorType={x:Type ctl:TreeListViewItem}}}" Value="False">
+                <Setter TargetName="Expander" Property="Visibility" Value="Hidden"/>
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </HierarchicalDataTemplate> 
+
+    <Style x:Key="TreeListViewItemDefaultStyle" TargetType="{x:Type ctl:TreeListViewItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctl:TreeListViewItem}">
+                    <StackPanel>
+                        <Border Name="Bd" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+                            <GridViewRowPresenter x:Name="PART_RowContent" Content="{TemplateBinding Header}" 
+                                                  Columns="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Columns}" />
+                        </Border>
+                        <ItemsPresenter x:Name="ItemsHost" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsExpanded" Value="false">
+                            <Setter TargetName="ItemsHost" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="HasHeader" Value="false"/>
+                                <Condition Property="Width" Value="Auto"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="PART_RowContent" Property="MinWidth" Value="75"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="HasHeader" Value="false"/>
+                                <Condition Property="Height" Value="Auto"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="PART_RowContent" Property="MinHeight" Value="19"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="true"/>
+                                <Condition Property="IsSelectionActive" Value="false"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Bd" Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="ctl:TreeViewItemBehavior.BringIntoViewWhenSelected" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TreeListViewItemViewModelStyle" TargetType="{x:Type ctl:TreeListViewItem}" BasedOn="{StaticResource TreeListViewItemDefaultStyle}">
+        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+        <Setter Property="FontWeight" Value="{Binding IsSelected, Converter={StaticResource boolToFontWeightConverter}}" />
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="ctl:TreeViewItemBehavior.BringIntoViewWhenSelected" Value="True" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style TargetType="{x:Type ctl:TreeListView}">
+        <Setter Property="ItemTemplate" Value="{StaticResource TreeViewItemViewModelColumn}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctl:TreeListView}">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <DockPanel>
+                            <GridViewHeaderRowPresenter DockPanel.Dock="Top"
+                                                        Columns="{Binding Path=Columns, RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderContainerStyle="{Binding Path=ColumnHeaderContainerStyle,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderTemplate="{Binding Path=ColumnHeaderTemplate,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderTemplateSelector="{Binding Path=ColumnHeaderTemplateSelector,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderStringFormat="{Binding Path=ColumnHeaderStringFormat,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        AllowsColumnReorder="{Binding Path=AllowsColumnReorder,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderContextMenu="{Binding Path=ColumnHeaderContextMenu,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        ColumnHeaderToolTip="{Binding Path=ColumnHeaderToolTip,RelativeSource={RelativeSource TemplatedParent}}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            <ScrollViewer Name="_tv_scrollviewer_"
+                                      Background="{TemplateBinding Background}"
+                                      Focusable="false"
+                                      CanContentScroll="false"
+                                      HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                      VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                      Padding="{TemplateBinding Padding}"
+                                      SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                                <ItemsPresenter/>
+                            </ScrollViewer>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MenuWithIcon" TargetType="{x:Type MenuItem}">
+        <Setter Property="Header" Value="{Binding DisplayName}"/>
+        <Setter Property="Icon">
+            <Setter.Value>
+                <Image Source="{Binding ImageSource}" Width="16" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Command" Value="{Binding Command}"/>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D447E85E-76EB-4AED-8EE3-D60D473A77DF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scch.DataAccess.EntityFramework</RootNamespace>
+    <AssemblyName>Scch.DataAccess.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <DocumentationFile>bin\Debug\Scch.DataAccess.EntityFramework.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="CheckInfo.cs" />
+    <Compile Include="DbTypeMetadata.cs" />
+    <Compile Include="DbPropertyMetadata.cs" />
+    <Compile Include="DbContextBuilder.cs" />
+    <Compile Include="DbContextInitializer.cs" />
+    <Compile Include="DbContextManager.cs" />
+    <Compile Include="DefaultInfo.cs" />
+    <Compile Include="EntityFrameworkHelper.cs" />
+    <Compile Include="EntityLogger.cs" />
+    <Compile Include="ExtendedDbContext.cs" />
+    <Compile Include="EntityFrameworkRepository.cs" />
+    <Compile Include="IDbContextBuilder.cs" />
+    <Compile Include="IEntityFrameworkRepository.cs" />
+    <Compile Include="IEntityFrameworkRepositoryFactory.cs" />
+    <Compile Include="IEntityFrameworkUnitOfWork.cs" />
+    <Compile Include="IndexInfo.cs" />
+    <Compile Include="IObjectQuery.cs" />
+    <Compile Include="MetadataInfo.cs" />
+    <Compile Include="ObjectQueryWrapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityFrameworkRepositoryFactory.cs" />
+    <Compile Include="SelfTrackingEntitiesContextExtensions.cs" />
+    <Compile Include="EntityFrameworkUnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scch.Common\Scch.Common.csproj">
+      <Project>{74F0A212-5216-4C5A-9DE6-75760DBEFA4E}</Project>
+      <Name>Scch.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess\Scch.DataAccess.csproj">
+      <Project>{73F24E41-F9B3-490C-916F-B8AC1A724049}</Project>
+      <Name>Scch.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel.EntityFramework\Scch.DomainModel.EntityFramework.csproj">
+      <Project>{3F402AD5-3CFD-45A6-912D-3DF0E7545E9A}</Project>
+      <Name>Scch.DomainModel.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel\Scch.DomainModel.csproj">
+      <Project>{1854F4CF-6C1B-45AF-A92A-9882890DF194}</Project>
+      <Name>Scch.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.Logging\Scch.Logging.csproj">
+      <Project>{CF9BBB3F-5C95-467E-9D19-863FFF5ED58F}</Project>
+      <Name>Scch.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.5.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="EplusE.Inspire.Controls.NavigationControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:EplusE.Inspire.Mvvm.ViewModel;assembly=EplusE.Inspire.Mvvm" Height="Auto" Width="Auto">
+    <UserControl.Resources>
+        <!--The standard DataTemplate for the CommandViewModel.
+           This template has an image with underneath it the display name of the command-->
+        <DataTemplate DataType="{x:Type vm:CommandViewModel}">
+            <Button Command="{Binding Path=Command}">
+                <StackPanel Orientation="Vertical">
+                    <Image Height="16" Width="16" Source="{Binding Path=Image32X32}"/>
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding Path=DisplayName}" 
+                               Visibility="{Binding Path=TextVisibility}"/>
+                </StackPanel>
+            </Button>
+        </DataTemplate>
+        <!--The standard DataTemplate for the NavigationViewModel.
+           This template shows a text with the current position and the number of items of a collection-->
+        <DataTemplate DataType="{x:Type ViewModel:NavigationViewModel}">
+            <TextBlock >
+                <TextBlock.Text>
+            <MultiBinding StringFormat=" {0:D} of {1:D}">
+                <Binding Path="Position" Mode="OneWay" />
+                <Binding Path="Count" Mode="OneWay"/>
+            </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+        </DataTemplate>
+        <!--The Style for the ListBox.
+           The commands are shown horizontally stacked-->
+        <Style TargetType="{x:Type ListBox}">
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                        />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <!--The listbox holding the viewmodels of the NavigationViewModel class-->
+    <ListBox Name="commandListbox" ItemsSource="{Binding Path=NavigationViewModels}">
+    </ListBox>
+
+</UserControl>

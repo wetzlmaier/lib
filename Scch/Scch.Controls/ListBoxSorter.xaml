@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Scch.Controls.ListBoxSorter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:imaging="clr-namespace:Scch.Common.Windows.Media.Imaging;assembly=Scch.Common"
+             xmlns:properties="clr-namespace:Scch.Controls.Properties"
+             xmlns:controls="clr-namespace:Scch.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="100">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <imaging:BitmapToImageSourceConverter x:Key="bitmapToImageSourceConverter"/>
+                </ResourceDictionary>
+                <ResourceDictionary Source="Themes\generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel x:Name="pnlSorting" Orientation="Vertical">
+            <Button x:Name="btnMoveUp" Margin="5" ToolTip="{x:Static properties:Resources.CommonCommands_MoveUpToolTip}">
+                <controls:AutoGreyableImage Height="32" Width="32" Source="{Binding Source={x:Static properties:Resources.MoveUp_64x64}, Converter={StaticResource bitmapToImageSourceConverter}}" />
+            </Button>
+            <Button x:Name="btnMoveDown" Margin="5" ToolTip="{x:Static properties:Resources.CommonCommands_MoveDownToolTip}">
+                <controls:AutoGreyableImage Height="32" Width="32" Source="{Binding Source={x:Static properties:Resources.MoveDown_64x64}, Converter={StaticResource bitmapToImageSourceConverter}}" />
+            </Button>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

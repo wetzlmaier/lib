@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59B6C693-68B9-48C7-99EB-03E98CEE04BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scch.BusinessLogic.NoSql.MongoDB</RootNamespace>
+    <AssemblyName>Scch.BusinessLogic.NoSql.MongoDB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Library\Newtonsoft.Json\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneralAssemblyInfo.cs">
+      <Link>GeneralAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="IMongoDBNoSqlCrudService.cs" />
+    <Compile Include="MongoDBNoSqlCrudService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scch.BusinessLogic.NoSql\Scch.BusinessLogic.NoSql.csproj">
+      <Project>{2C410DF9-A969-4401-A830-69A4D52E349F}</Project>
+      <Name>Scch.BusinessLogic.NoSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.Common\Scch.Common.csproj">
+      <Project>{c3e275b2-0608-4d91-9ea6-a367ddf3a10b}</Project>
+      <Name>Scch.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess.NoSql.MongoDB\Scch.DataAccess.NoSql.MongoDB.csproj">
+      <Project>{7e3cddea-4ec3-442d-859a-0656d4360852}</Project>
+      <Name>Scch.DataAccess.NoSql.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess.NoSql\Scch.DataAccess.NoSql.csproj">
+      <Project>{ABFCEA28-6F55-49A7-B9EC-B9E0978AC019}</Project>
+      <Name>Scch.DataAccess.NoSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DataAccess\Scch.DataAccess.csproj">
+      <Project>{73f24e41-f9b3-490c-916f-b8ac1a724049}</Project>
+      <Name>Scch.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel.NoSql\Scch.DomainModel.NoSql.csproj">
+      <Project>{83F6045E-B45A-4533-B08E-B4F418491D3F}</Project>
+      <Name>Scch.DomainModel.NoSql</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.DomainModel\Scch.DomainModel.csproj">
+      <Project>{1854f4cf-6c1b-45af-a92a-9882890df194}</Project>
+      <Name>Scch.DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scch.Logging\Scch.Logging.csproj">
+      <Project>{CF9BBB3F-5C95-467E-9D19-863FFF5ED58F}</Project>
+      <Name>Scch.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EnterpriseLibrary.Common">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="EnterpriseLibrary.Logging">
+      <Version>6.0.1304</Version>
+    </PackageReference>
+    <PackageReference Include="MongoDB.Bson">
+      <Version>3.7.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

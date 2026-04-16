@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="AddAll_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddAll_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bullets_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Bullets_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Calendar_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Calendar_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommonCommands_AddDisplayName" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="CommonCommands_AddToolTip" xml:space="preserve">
+    <value>Eintrag hinzufügen</value>
+  </data>
+  <data name="CommonCommands_BulletsDisplayName" xml:space="preserve">
+    <value>Aufzählungszeichen</value>
+  </data>
+  <data name="CommonCommands_BulletsToolTip" xml:space="preserve">
+    <value>Aufzählungszeichen</value>
+  </data>
+  <data name="CommonCommands_CalendarDisplayName" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="CommonCommands_CalendarToolTip" xml:space="preserve">
+    <value>Datum bearbeiten</value>
+  </data>
+  <data name="CommonCommands_CancelDisplayName" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="CommonCommands_CancelToolTip" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="CommonCommands_CopyDisplayName" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="CommonCommands_CopyToolTip" xml:space="preserve">
+    <value>Markierung in die Zwischenablage einfügen</value>
+  </data>
+  <data name="CommonCommands_CutDisplayName" xml:space="preserve">
+    <value>Ausschneiden</value>
+  </data>
+  <data name="CommonCommands_CutToolTip" xml:space="preserve">
+    <value>Markierung ausschneiden</value>
+  </data>
+  <data name="CommonCommands_DeleteColumnDisplayName" xml:space="preserve">
+    <value>Spalte löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteColumnToolTip" xml:space="preserve">
+    <value>Spalte löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteDisplayName" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteRowDisplayName" xml:space="preserve">
+    <value>Zeile löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteRowToolTip" xml:space="preserve">
+    <value>Zeile löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteTableDisplayName" xml:space="preserve">
+    <value>Tabelle löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteTableToolTip" xml:space="preserve">
+    <value>Tabelle löschen</value>
+  </data>
+  <data name="CommonCommands_DeleteToolTip" xml:space="preserve">
+    <value>Eintrag löschen</value>
+  </data>
+  <data name="CommonCommands_DownloadDisplayName" xml:space="preserve">
+    <value>Herunterladen</value>
+  </data>
+  <data name="CommonCommands_DownloadToolTip" xml:space="preserve">
+    <value>Herunterladen</value>
+  </data>
+  <data name="CommonCommands_EditDisplayName" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="CommonCommands_EditToolTip" xml:space="preserve">
+    <value>Eintrag bearbeiten</value>
+  </data>
+  <data name="CommonCommands_FavoritesDisplayName" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="CommonCommands_FavoritesToolTip" xml:space="preserve">
+    <value>Favoriten</value>
+  </data>
+  <data name="CommonCommands_FindDisplayName" xml:space="preserve">
+    <value>Finden</value>
+  </data>
+  <data name="CommonCommands_FindToolTip" xml:space="preserve">
+    <value>Finden</value>
+  </data>
+  <data name="CommonCommands_FirstDisplayName" xml:space="preserve">
+    <value>Erster Eintrag</value>
+  </data>
+  <data name="CommonCommands_FirstToolTip" xml:space="preserve">
+    <value>Navigiert zum ersten Eintrag</value>
+  </data>
+  <data name="CommonCommands_FolderDisplayName" xml:space="preserve">
+    <value>Ordner</value>
+  </data>
+  <data name="CommonCommands_FolderToolTip" xml:space="preserve">
+    <value>Ordner anzeigen</value>
+  </data>
+  <data name="CommonCommands_ForwardMailDisplayName" xml:space="preserve">
+    <value>Weiterleiten</value>
+  </data>
+  <data name="CommonCommands_ForwardMailToolTip" xml:space="preserve">
+    <value>Nachricht weiterleiten</value>
+  </data>
+  <data name="CommonCommands_HelpDisplayName" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="CommonCommands_HelpToolTip" xml:space="preserve">
+    <value>Hilfe anzeigen</value>
+  </data>
+  <data name="CommonCommands_InformationDisplayName" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="CommonCommands_InformationToolTip" xml:space="preserve">
+    <value>Informationen anzeigen</value>
+  </data>
+  <data name="CommonCommands_InsertColumnLeftDisplayName" xml:space="preserve">
+    <value>Spalte links einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertColumnLeftToolTip" xml:space="preserve">
+    <value>Spalte links einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertColumnRightDisplayName" xml:space="preserve">
+    <value>Spalte rechts einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertColumnRightToolTip" xml:space="preserve">
+    <value>Spalte rechts einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertRowAboveDisplayName" xml:space="preserve">
+    <value>Zeile oberhalb einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertRowAboveToolTip" xml:space="preserve">
+    <value>Zeile oberhalb einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertRowBelowDisplayName" xml:space="preserve">
+    <value>Zeile unterhalb einfügen</value>
+  </data>
+  <data name="CommonCommands_InsertRowBelowToolTip" xml:space="preserve">
+    <value>Zeile unterhalb einfügen</value>
+  </data>
+  <data name="CommonCommands_InternetDisplayName" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="CommonCommands_InternetToolTip" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="CommonCommands_LastDisplayName" xml:space="preserve">
+    <value>Letzter Eintrag</value>
+  </data>
+  <data name="CommonCommands_LastToolTip" xml:space="preserve">
+    <value>Navigiert zum letzten Eintrag</value>
+  </data>
+  <data name="CommonCommands_LineDisplayName" xml:space="preserve">
+    <value>Linie einfügen</value>
+  </data>
+  <data name="CommonCommands_LineToolTip" xml:space="preserve">
+    <value>Linie einfügen</value>
+  </data>
+  <data name="CommonCommands_LoginDisplayName" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="CommonCommands_LoginToolTip" xml:space="preserve">
+    <value>Am System anmelden</value>
+  </data>
+  <data name="CommonCommands_LogoutDisplayName" xml:space="preserve">
+    <value>Abmelden</value>
+  </data>
+  <data name="CommonCommands_LogoutToolTip" xml:space="preserve">
+    <value>Vom System abmelden</value>
+  </data>
+  <data name="CommonCommands_NavigateBackDisplayName" xml:space="preserve">
+    <value>Zurück</value>
+  </data>
+  <data name="CommonCommands_NavigateBackToolTip" xml:space="preserve">
+    <value>Zurück navigieren</value>
+  </data>
+  <data name="CommonCommands_NavigateForwardDisplayName" xml:space="preserve">
+    <value>Vorwärts</value>
+  </data>
+  <data name="CommonCommands_NavigateForwardToolTip" xml:space="preserve">
+    <value>Vorwärts navigieren</value>
+  </data>
+  <data name="CommonCommands_NewDisplayName" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="CommonCommands_NewMailDisplayName" xml:space="preserve">
+    <value>Neu</value>
+  </data>
+  <data name="CommonCommands_NewMailToolTip" xml:space="preserve">
+    <value>Neue Nachricht</value>
+  </data>
+  <data name="CommonCommands_NewToolTip" xml:space="preserve">
+    <value>Neuer Eintrag</value>
+  </data>
+  <data name="CommonCommands_NextDisplayName" xml:space="preserve">
+    <value>Nächster Eintrag</value>
+  </data>
+  <data name="CommonCommands_NextToolTip" xml:space="preserve">
+    <value>Navigiert zum nächsten Eintrag</value>
+  </data>
+  <data name="CommonCommands_NumberingDisplayName" xml:space="preserve">
+    <value>Nummerierung</value>
+  </data>
+  <data name="CommonCommands_NumberingToolTip" xml:space="preserve">
+    <value>Nummerierung</value>
+  </data>
+  <data name="CommonCommands_OkDisplayName" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CommonCommands_OkToolTip" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CommonCommands_OpenDisplayName" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="CommonCommands_OpenToolTip" xml:space="preserve">
+    <value>Öffnen</value>
+  </data>
+  <data name="CommonCommands_PasteDisplayName" xml:space="preserve">
+    <value>Einfügen</value>
+  </data>
+  <data name="CommonCommands_PasteToolTip" xml:space="preserve">
+    <value>Aus der Zwischenablage einfügen</value>
+  </data>
+  <data name="CommonCommands_PauseDisplayName" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="CommonCommands_PauseToolTip" xml:space="preserve">
+    <value>Wiedergabe pausieren</value>
+  </data>
+  <data name="CommonCommands_PictureDisplayName" xml:space="preserve">
+    <value>Bild einfügen</value>
+  </data>
+  <data name="CommonCommands_PictureToolTip" xml:space="preserve">
+    <value>Bild einfügen</value>
+  </data>
+  <data name="CommonCommands_PlayDisplayName" xml:space="preserve">
+    <value>Wiedergabe</value>
+  </data>
+  <data name="CommonCommands_PlayToolTip" xml:space="preserve">
+    <value>Wiedergabe starten</value>
+  </data>
+  <data name="CommonCommands_PreviewDisplayName" xml:space="preserve">
+    <value>Vorschau</value>
+  </data>
+  <data name="CommonCommands_PreviewToolTip" xml:space="preserve">
+    <value>Vorschau anzeigen</value>
+  </data>
+  <data name="CommonCommands_PreviousDisplayName" xml:space="preserve">
+    <value>Vorheriger Eintrag</value>
+  </data>
+  <data name="CommonCommands_PreviousToolTip" xml:space="preserve">
+    <value>Navigiert zum vorherigen Eintrag</value>
+  </data>
+  <data name="CommonCommands_PrintDisplayName" xml:space="preserve">
+    <value>Drucken</value>
+  </data>
+  <data name="CommonCommands_PrintToolTip" xml:space="preserve">
+    <value>Ansicht drucken</value>
+  </data>
+  <data name="CommonCommands_PropertiesDisplayName" xml:space="preserve">
+    <value>Eigenschaften</value>
+  </data>
+  <data name="CommonCommands_PropertiesToolTip" xml:space="preserve">
+    <value>Eigenschaften anzeigen</value>
+  </data>
+  <data name="CommonCommands_RedoDisplayName" xml:space="preserve">
+    <value>Wiederherstellen</value>
+  </data>
+  <data name="CommonCommands_RedoToolTip" xml:space="preserve">
+    <value>Änderung wiederherstellen</value>
+  </data>
+  <data name="CommonCommands_RefreshDisplayName" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="CommonCommands_RefreshToolTip" xml:space="preserve">
+    <value>Einträge aktualisieren</value>
+  </data>
+  <data name="CommonCommands_RemoveDisplayName" xml:space="preserve">
+    <value>Entfernen</value>
+  </data>
+  <data name="CommonCommands_RemoveToolTip" xml:space="preserve">
+    <value>Eintrag entfernen</value>
+  </data>
+  <data name="CommonCommands_RenameDisplayName" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
+  <data name="CommonCommands_RenameToolTip" xml:space="preserve">
+    <value>Eintrag umbenennen</value>
+  </data>
+  <data name="CommonCommands_SaveDisplayName" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="CommonCommands_SaveToolTip" xml:space="preserve">
+    <value>Eintrag speichern</value>
+  </data>
+  <data name="CommonCommands_SearchDisplayName" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="CommonCommands_SearchToolTip" xml:space="preserve">
+    <value>Suchen</value>
+  </data>
+  <data name="CommonCommands_SendMailDisplayName" xml:space="preserve">
+    <value>Senden</value>
+  </data>
+  <data name="CommonCommands_SendMailToolTip" xml:space="preserve">
+    <value>Nachricht senden</value>
+  </data>
+  <data name="CommonCommands_SettingsDisplayName" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="CommonCommands_SettingsToolTip" xml:space="preserve">
+    <value>Einstellungen anzeigen</value>
+  </data>
+  <data name="CommonCommands_StopDisplayName" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="CommonCommands_StopToolTip" xml:space="preserve">
+    <value>Stop</value>
+  </data>
+  <data name="CommonCommands_SynchronizeDisplayName" xml:space="preserve">
+    <value>Synchronisieren</value>
+  </data>
+  <data name="CommonCommands_SynchronizeToolTip" xml:space="preserve">
+    <value>Synchronisieren</value>
+  </data>
+  <data name="CommonCommands_TableDisplayName" xml:space="preserve">
+    <value>Tabelle einfügen</value>
+  </data>
+  <data name="CommonCommands_TableToolTip" xml:space="preserve">
+    <value>Tabelle einfügen</value>
+  </data>
+  <data name="CommonCommands_UndoDisplayName" xml:space="preserve">
+    <value>Rückgängig</value>
+  </data>
+  <data name="CommonCommands_UndoToolTip" xml:space="preserve">
+    <value>Änderung rückgängig machen</value>
+  </data>
+  <data name="CommonCommands_UploadDisplayName" xml:space="preserve">
+    <value>Heraufladen</value>
+  </data>
+  <data name="CommonCommands_UploadToolTip" xml:space="preserve">
+    <value>Heraufladen</value>
+  </data>
+  <data name="CommonCommands_ZoomInDisplayName" xml:space="preserve">
+    <value>Vergrößern</value>
+  </data>
+  <data name="CommonCommands_ZoomInToolTip" xml:space="preserve">
+    <value>Anzeige vergrößern</value>
+  </data>
+  <data name="CommonCommands_ZoomOutDisplayName" xml:space="preserve">
+    <value>Verkleinern</value>
+  </data>
+  <data name="CommonCommands_ZoomOutToolTip" xml:space="preserve">
+    <value>Anzeige verkleinern</value>
+  </data>
+  <data name="Copy_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Copy_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cut_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cut_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteColumn_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteColumn_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteRow_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteRow_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteTable_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeleteTable_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Favorites_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favorites_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="First_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\First_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folder_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Folder_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ForwardMail_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ForwardMail_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Information_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Information_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsertColumnLeft_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertColumnLeft_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsertColumnRight_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertColumnRight_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsertRowAbove_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertRowAbove_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InsertRowBelow_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InsertRowBelow_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Internet_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Internet_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Last_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Last_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavigateBack_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavigateBack_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NavigateForward_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NavigateForward_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewMail_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewMail_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="New_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\New_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Next_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Next_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Numbering_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Numbering_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ok_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ok_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Open_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Open_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Paste_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paste_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pause_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pause_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Picture_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Picture_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Preview_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Preview_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Previous_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Previous_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Print_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Print_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Properties_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Properties_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Redo_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Refresh_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Refresh_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RemoveAll_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RemoveAll_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Remove_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Remove_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rename_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rename_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Save_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SendMail_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SendMail_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Stop_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Stop_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Synchronize_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Synchronize_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TablePropertiesViewModelAutoWidthDisplayName" xml:space="preserve">
+    <value>Automatisch</value>
+  </data>
+  <data name="TablePropertiesViewModelBorderBrushDisplayName" xml:space="preserve">
+    <value>Rahmenfarbe</value>
+  </data>
+  <data name="TablePropertiesViewModelBorderThicknessDisplayName" xml:space="preserve">
+    <value>Rahmenbreite</value>
+  </data>
+  <data name="TablePropertiesViewModelColumnCountDisplayName" xml:space="preserve">
+    <value>Anzahl der Spalten</value>
+  </data>
+  <data name="TablePropertiesViewModelColumnCountRange" xml:space="preserve">
+    <value>'{0}' muss größer oder gleich {1} sein.</value>
+  </data>
+  <data name="TablePropertiesViewModelColumnWidthDisplayName" xml:space="preserve">
+    <value>Spaltenbreite</value>
+  </data>
+  <data name="TablePropertiesViewModelColumnWidthRange" xml:space="preserve">
+    <value>'{0}' muss größer oder gleich {1} sein.</value>
+  </data>
+  <data name="TablePropertiesViewModelRowCountDisplayName" xml:space="preserve">
+    <value>Anzahl der Zeilen</value>
+  </data>
+  <data name="TablePropertiesViewModelRowCountRange" xml:space="preserve">
+    <value>'{0}' muss größer oder gleich {1} sein.</value>
+  </data>
+  <data name="TablePropertiesViewModel_DisplayName" xml:space="preserve">
+    <value>Tabelleneigenschaften bearbeiten</value>
+  </data>
+  <data name="Undo_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Undo_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Upload_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Upload_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZoomIn_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZoomIn_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZoomOut_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZoomOut_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddNew_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddNew_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommonCommands_AddAllDisplayName" xml:space="preserve">
+    <value>Alle hinzufügen</value>
+  </data>
+  <data name="CommonCommands_AddAllToolTip" xml:space="preserve">
+    <value>Alle hinzufügen</value>
+  </data>
+  <data name="CommonCommands_AddNewDisplayName" xml:space="preserve">
+    <value>Neuer Eintrag</value>
+  </data>
+  <data name="CommonCommands_AddNewToolTip" xml:space="preserve">
+    <value>Neuen Eintrag hinzufügen</value>
+  </data>
+  <data name="CommonCommands_MoveBottomDisplayName" xml:space="preserve">
+    <value>Ende</value>
+  </data>
+  <data name="CommonCommands_MoveBottomToolTip" xml:space="preserve">
+    <value>An das Ende verschieben</value>
+  </data>
+  <data name="CommonCommands_MoveDownDisplayName" xml:space="preserve">
+    <value>Nach unten</value>
+  </data>
+  <data name="CommonCommands_MoveDownToolTip" xml:space="preserve">
+    <value>Nach unten verschieben</value>
+  </data>
+  <data name="CommonCommands_MoveTopDisplayName" xml:space="preserve">
+    <value>Anfang</value>
+  </data>
+  <data name="CommonCommands_MoveTopToolTip" xml:space="preserve">
+    <value>An den Anfang verschieben</value>
+  </data>
+  <data name="CommonCommands_MoveUpDisplayName" xml:space="preserve">
+    <value>Nach oben</value>
+  </data>
+  <data name="CommonCommands_MoveUpToolTip" xml:space="preserve">
+    <value>Nach oben verschieben</value>
+  </data>
+  <data name="CommonCommands_RemoveAllDisplayName" xml:space="preserve">
+    <value>Alle entfernen</value>
+  </data>
+  <data name="CommonCommands_RemoveAllToolTip" xml:space="preserve">
+    <value>Alle entfernen</value>
+  </data>
+  <data name="MoveBottom_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveBottom_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveDown_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveDown_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveTop_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveTop_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoveUp_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MoveUp_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Find_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Find_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Line_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Line_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table_32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table_32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Record_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Record_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommonCommands_RecordDisplayName" xml:space="preserve">
+    <value>Aufzeichnen</value>
+  </data>
+  <data name="CommonCommands_RecordToolTip" xml:space="preserve">
+    <value>Aufzeichnen start/stop</value>
+  </data>
+  <data name="Screenshot_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CommonCommands_ScreenshotDisplayName" xml:space="preserve">
+    <value>Bildschirmfoto</value>
+  </data>
+  <data name="CommonCommands_ScreenshotToolTip" xml:space="preserve">
+    <value>Bildschirmfoto erstellen</value>
+  </data>
+  <data name="CommonCommands_StartDisplayName" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="CommonCommands_StartToolTip" xml:space="preserve">
+    <value>Starten</value>
+  </data>
+  <data name="Start_64x64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start_64x64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
