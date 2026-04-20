@@ -22,7 +22,6 @@ namespace Scch.BusinessLogic.Hibernate
         public TEntity Create()
         {
             var entity = new TEntity();
-            entity.StartTracking();
             return entity;
         }
 
